@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>AAZAAN — Coming Soon</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <style>
@@ -393,11 +393,99 @@
   footer .logo-footer span em { color: var(--teal); font-style: normal; }
   footer a { color: var(--teal); text-decoration: none; }
 
-  @media (max-width: 600px) {
-    .options-grid { grid-template-columns: 1fr; }
-    .steps { grid-template-columns: 1fr; }
-    .navbar { padding: 1rem 1.2rem; }
-    .hero-headline, .hero-headline-accent { font-size: clamp(3.5rem, 18vw, 6rem); }
+  /* ── MOBILE ── */
+  @media (max-width: 640px) {
+
+    /* Navbar */
+    .navbar { padding: 0.9rem 1.2rem; }
+    .nav-brand { font-size: 18px; }
+    .nav-logo img { width: 34px; height: 34px; }
+    .nav-badge { font-size: 11px; padding: 4px 10px; }
+    .blink-dot { width: 5px; height: 5px; }
+
+    /* Hero */
+    .hero { padding: 5.5rem 1.2rem 3.5rem; min-height: 100svh; }
+    .hero-logo-img { width: 90px; height: 90px; border-radius: 18px; padding: 8px; }
+    .hero-logo-wrap { margin-bottom: 1.4rem; }
+    .launching-label { font-size: 0.72rem; letter-spacing: 0.16em; }
+    .hero-headline { font-size: clamp(3.2rem, 17vw, 5rem); }
+    .hero-headline-accent { font-size: clamp(3.2rem, 17vw, 5rem); margin-bottom: 1.2rem; }
+    .coming-soon-pill { font-size: 13px; padding: 8px 18px; margin-bottom: 1.2rem; }
+    .hero-tagline { font-size: 1rem; margin-bottom: 0.5rem; }
+    .hero-sub { font-size: 12px; letter-spacing: 0.05em; margin-bottom: 2rem; }
+    .hero-cta { flex-direction: column; align-items: center; gap: 10px; width: 100%; }
+    .btn-primary, .btn-ghost { width: 100%; max-width: 320px; text-align: center; padding: 15px 24px; font-size: 15px; }
+
+    /* Counter */
+    .counter-strip { font-size: 13px; padding: 11px 1rem; }
+
+    /* What is section */
+    .section { padding: 3.5rem 1.2rem; }
+    .section-title { font-size: 1.8rem; }
+    .section-desc { font-size: 15px; }
+    .feat-card { padding: 1.4rem; }
+    .feat-icon { font-size: 1.7rem; }
+    .feat-title { font-size: 15px; }
+    .feat-desc { font-size: 13px; }
+
+    /* How it works */
+    .hiw-bg { padding: 3.5rem 1.2rem; }
+    .steps { grid-template-columns: 1fr; gap: 16px; margin-top: 2rem; }
+    .step-card { padding: 1.4rem 1.2rem; }
+    .step-num { font-size: 3rem; }
+    .step-title { font-size: 16px; }
+    .step-desc { font-size: 13px; }
+
+    /* AAZA AI */
+    .ai-section { padding: 4rem 1.2rem; }
+    .ai-title { font-size: clamp(2rem, 10vw, 3rem); }
+    .ai-sub { font-size: 16px; }
+    .ai-desc { font-size: 15px; }
+    .ai-pills { gap: 8px; }
+    .ai-pill { font-size: 13px; padding: 7px 14px; }
+    .ai-mystery { font-size: 14px; padding: 1.4rem; }
+    .ai-badge { font-size: 11px; padding: 5px 14px; }
+
+    /* Survey */
+    .survey-bg { padding: 3.5rem 1.2rem; }
+    .options-grid { grid-template-columns: 1fr; gap: 10px; }
+    .option-btn { padding: 0.9rem 1rem; font-size: 14px; }
+    .emoji-opt { font-size: 1.1rem; }
+    .q-text { font-size: 1.2rem; }
+    .btn-back, .btn-next { padding: 11px 22px; font-size: 14px; }
+    .survey-done-title { font-size: 1.6rem; }
+    .survey-done-desc { font-size: 14px; }
+
+    /* Registration */
+    .reg-bg { padding: 4rem 1.2rem; }
+    .reg-title { font-size: clamp(1.7rem, 7vw, 2.5rem); }
+    .reg-desc { font-size: 15px; margin-bottom: 1.8rem; }
+    .perks { gap: 8px; }
+    .perk { font-size: 13px; padding: 7px 14px; }
+    .reg-form { flex-direction: column; align-items: stretch; max-width: 100%; gap: 10px; }
+    .reg-select { flex: none; width: 100%; border-radius: 14px; text-align: left; padding: 13px 18px; }
+    .reg-input { flex: none; width: 100%; border-radius: 14px; padding: 13px 18px; min-width: unset; }
+    .reg-submit { width: 100%; border-radius: 14px; padding: 15px; font-size: 16px; }
+    .success-msg { padding: 1.5rem; }
+    .reg-count { font-size: 13px; margin-top: 1.2rem; }
+
+    /* Footer */
+    footer { padding: 2rem 1.2rem; }
+    footer .logo-footer span { font-size: 18px; }
+    footer .logo-footer img { width: 30px; height: 30px; }
+  }
+
+  /* Tablet tweaks */
+  @media (min-width: 641px) and (max-width: 900px) {
+    .hero-headline { font-size: clamp(4rem, 12vw, 7rem); }
+    .hero-headline-accent { font-size: clamp(4rem, 12vw, 7rem); }
+    .reg-form { max-width: 480px; }
+    .reg-select { flex: 0 0 130px; }
+    .section { padding: 4rem 2rem; }
+    .hiw-bg { padding: 4rem 2rem; }
+    .ai-section { padding: 5rem 2rem; }
+    .survey-bg { padding: 4rem 2rem; }
+    .reg-bg { padding: 4rem 2rem; }
   }
 </style>
 </head>
@@ -539,7 +627,7 @@
         <option value="Teacher">Teacher</option>
         <option value="Parent">Parent</option>
       </select>
-      <input class="reg-input" id="name-input" type="text" placeholder="Your full name" style="flex:0 0 180px;min-width:150px;" />
+      <input class="reg-input" id="name-input" type="text" placeholder="Your full name" />
       <input class="reg-input" id="contact-input" type="text" placeholder="Email or phone number" />
       <button class="reg-submit" onclick="registerUser()">Claim My Spot →</button>
     </div>
