@@ -174,6 +174,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 2.5rem;displa
 .video-outer{position:relative;width:100%;padding:3px;border-radius:22px;background:linear-gradient(135deg,rgba(61,191,184,0.5),rgba(45,52,148,0.4),rgba(61,191,184,0.2));box-sizing:border-box;}
 .video-inner{position:relative;width:100%;border-radius:20px;overflow:hidden;background:#000;box-shadow:0 20px 60px rgba(0,0,0,0.7),0 0 40px rgba(61,191,184,0.08);aspect-ratio:16/9;}
 .video-inner video{position:absolute;top:0;left:0;width:100%;height:100%;display:block;object-fit:contain;background:#000;}
+.video-inner iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:20px;}
 .video-shine{position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.03),transparent);animation:shine 6s ease-in-out infinite;pointer-events:none;z-index:2;}
 @keyframes shine{0%,100%{left:-100%;}50%{left:150%;}}
 /* MOBILE */
@@ -253,9 +254,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 2.5rem;displa
     <div class="video-outer reveal">
       <div class="video-inner">
         <div class="video-shine"></div>
-        <video loop controls autoplay playsinline preload="auto">
-          <source src="AAZAAN_Intro.mp4" type="video/mp4">
-        </video>
+        <iframe
+          src="https://www.youtube.com/embed/CgRh2dz7ZVM?autoplay=1&loop=1&playlist=CgRh2dz7ZVM&mute=0&rel=0&modestbranding=1&controls=1"
+          title="AAZAAN Introduction"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
   </div>
