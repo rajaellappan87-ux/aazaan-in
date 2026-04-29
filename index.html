@@ -238,8 +238,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 2.5rem;displa
     <span class="hero-word w2"><span>is coming.</span></span>
     <p class="hero-sub">Students · Teachers · Parents · One Platform</p>
     <div class="hero-cta">
-      <button class="btn-p" onclick="goTo(4)">Take the Survey</button>
-      <button class="btn-g" onclick="goTo(5)">Register Early →</button>
+      <button class="btn-p" onclick="goTo(5)">Take the Survey</button>
+      <button class="btn-g" onclick="goTo(6)">Register Early →</button>
     </div>
   </div>
   <div class="scroll-hint">
@@ -336,7 +336,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 2.5rem;displa
       <div class="done-icon">🙏</div>
       <div class="done-title">Thank you!</div>
       <div class="done-sub">Your answers shape what we build first.<br/>Now claim your early spot.</div>
-      <button class="btn-p" onclick="goTo(5)">Register for Early Access →</button>
+      <button class="btn-p" onclick="goTo(6)">Register for Early Access →</button>
     </div>
   </div>
 </section>
@@ -415,7 +415,12 @@ animParticles();
 // ── SCROLL NAV DOTS ──
 var sections=document.querySelectorAll('section');
 var dots=document.querySelectorAll('.dot');
-function goTo(i){sections[i].scrollIntoView({behavior:'smooth'});}
+function goTo(i){
+  var el = sections[i];
+  var navH = document.querySelector('nav').offsetHeight;
+  var top = el.getBoundingClientRect().top + window.pageYOffset - navH;
+  window.scrollTo({top: top, behavior: 'smooth'});
+}
 var io=new IntersectionObserver(function(entries){
   entries.forEach(function(e){
     if(e.isIntersecting){
